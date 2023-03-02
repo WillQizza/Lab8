@@ -45,6 +45,22 @@ public class CustomListTest {
         assertTrue(list.hasCity(city));
     }
 
+    /**
+     * Adds the city to the list.
+     * Removes the city from the list.
+     * Confirms the count of the list is 0.
+     */
+    @Test
+    public void deleteCityTest() {
+        CustomList list = getCustomList();
+        City city = getCity();
+
+        list.addCity(city);
+
+        list.deleteCity(getCity());
+        assertEquals(0, list.getCount());
+    }
+
 
     private static CustomList getCustomList() {
         return new CustomList(null, new ArrayList<>());
