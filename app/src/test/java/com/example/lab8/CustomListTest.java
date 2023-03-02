@@ -62,7 +62,7 @@ public class CustomListTest {
     }
 
     @Test
-    public void countCitiesTest() {
+    public void getCountTest() {
         CustomList list = getCustomList();
         assertEquals(0, list.getCount());
 
